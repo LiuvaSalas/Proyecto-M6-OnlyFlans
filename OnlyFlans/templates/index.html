@@ -1,3 +1,4 @@
+{% extends 'layout/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    {% block content %}
     <h1>INDICE</h1>
     <ul>
         <li>
@@ -15,5 +17,6 @@
             <a href="/welcome">Bienvenidos</a>
         </li>
     </ul>
+    {% endblock %}
 </body>
 </html>
