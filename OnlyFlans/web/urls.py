@@ -17,6 +17,7 @@ Including another URLconf
 from django.urls import path
 from OnlyFlans import views
 
+
 urlpatterns = [
     path("", views.index, name = "index"),
     path("about/", views.about, name = "about"),
