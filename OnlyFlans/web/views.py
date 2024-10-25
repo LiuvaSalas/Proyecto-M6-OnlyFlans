@@ -20,4 +20,12 @@ def about(request):
 
 
 def welcome(request):
-    return render(request, "welcome.html", {})
+    flanes_privados = Flan.objects.filter(is_private=True)
+
+    contexto = {
+        'flanes_privados': flanes_privados,
+    }
+    return render(request, "welcome.html", contexto)
+
+def contacto(request):
+    return render(request, "contacto.html", {})
