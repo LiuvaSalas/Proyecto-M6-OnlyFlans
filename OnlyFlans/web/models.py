@@ -18,3 +18,6 @@ class ContactForm(models.Model):
     customer_email = models.EmailField()
     customer_name = models.CharField(max_length=64)
     message = models.TextField()
+
+    def __str__(self):
+        return f"{self.customer_name} - {self.customer_email}"

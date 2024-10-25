@@ -1,4 +1,6 @@
-{% extends 'layout/base.html' %} {% load static %}
+{% extends 'layout/base.html' %}
+<!---->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,15 +15,8 @@
   {% block content %}
   <div class="container">
     <hr />
-    <h1>Contacto</h1>
-    <div class="container">
-      <!--Formulario para contacto del usuario-->
-      <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-    </div>
+    <h1>Registro Exitoso</h1>
+    <p>Gracias por contactarte con OnlyFlans, te responderemos en breve.</p>
   </div>
   {% endblock %}
 </body>
