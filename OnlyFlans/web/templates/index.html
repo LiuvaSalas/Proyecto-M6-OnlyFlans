@@ -15,15 +15,16 @@
     {% block content %}
     <div class="container align-items-center">
         <hr>
-        <!--CARDS de Productos-->
-        <div class="row justify-content-center" id="card-postre">
-            {% for item in postres %}
+        <!--CARDS de Productos 2-->
+        <div class="row justify-content-center">
+            {% for flan in flanes_publicos %}
             <div class="col-auto my-2">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static item.ruta %}" class="card-img-top img-responsive" alt="...">
+                <div class="card card-postre" style="width: 18rem;">
+                    <img src="{{ flan.image_url }}" class="card-img-top img-responsive" alt="...">
                     <div class="card-body">
-                        <h3 class="card-title">{{ item.nombre }}</h3>
-                        <p class="card-text">{{ item.descripcion }}</p>
+                        <h5 class="card-title">{{ flan.name }}</h5>
+                        <hr>
+                        <p class="card-text">{{ flan.description }}</p>
                     </div>
                 </div>
             </div>

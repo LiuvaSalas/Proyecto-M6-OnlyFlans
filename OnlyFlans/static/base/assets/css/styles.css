@@ -14,3 +14,12 @@
 .footer p {
   color: black;
 }
+
+.card-postre {
+  height: 400px;
+  width: 300px;
+}
+
+.card-postre img {
+  height: 200px;
+}
