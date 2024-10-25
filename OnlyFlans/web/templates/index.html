@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Enlace archivo css en carpeta static-->
+    <link rel="stylesheet" type="text/css" href="{% static 'base/assets/css/styles.css' %}">
 </head>
 
 <body>
@@ -14,43 +16,18 @@
     <div class="container align-items-center">
         <hr>
         <!--CARDS de Productos-->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="card-postre">
+            {% for item in postres %}
             <div class="col-auto my-2">
                 <div class="card" style="width: 18rem;">
-                    <img src="{% static 'assets/img/productos/flan-chocolate-negro.jpg' %}" class="card-img-top"
-                        class="img-responsive" alt="...">
-                    <h3 class="ps-3">nombre_producto</h3>
+                    <img src="{% static item.ruta %}" class="card-img-top img-responsive" alt="...">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
+                        <h3 class="card-title">{{ item.nombre }}</h3>
+                        <p class="card-text">{{ item.descripcion }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-auto my-2">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'assets/img/productos/flan-chocolate-negro.jpg' %}" class="card-img-top"
-                        class="img-responsive" alt="...">
-                    <h3 class="ps-3">nombre_producto</h3>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-auto my-2">
-                <div class="card" style="width: 18rem;">
-                    <img src="{% static 'assets/img/productos/flan-chocolate-negro.jpg' %}" class="card-img-top"
-                        class="img-responsive" alt="...">
-                    <h3 class="ps-3">nombre_producto</h3>
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's
-                            content.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
 
 
