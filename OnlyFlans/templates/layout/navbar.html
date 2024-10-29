@@ -27,11 +27,23 @@
                 <a class="nav-link" href="/about" target="_blank">About</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="/contacto" target="_blank">Contacto</a>
+              </li>
+              {%if user.is_authenticated%}
+              <li class="nav-item">
                 <a class="nav-link" href="/welcome" target="_blank">Bienvenidos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contacto" target="_blank">Contacto</a>
+                <a class="nav-link" href="/logout" target="_blank">Logout</a>
               </li>
+              {%else%}
+              <li class="nav-item">
+                <a class="nav-link" href="/login" target="_blank">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup" target="_blank">Signup</a>
+              </li>
+              {%endif%}
             </ul>
           </div>
         </div>

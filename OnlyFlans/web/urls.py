@@ -25,4 +25,8 @@ urlpatterns = [
     path("welcome/", views.welcome, name="welcome"),
     path("contacto/", views.contacto, name="contacto"),
     path("registro_exitoso/", views.registro_exitoso, name="registro_exitoso"),
+    path("login/", views.log_in, name="login"),
+    path("logout/", views.log_out, name="logout"),
+    path("signup/", views.sign_up, name="signup"),
+    path("usuario_existente/", views.usuario_existente, name="usuario_existente"),
 ]
