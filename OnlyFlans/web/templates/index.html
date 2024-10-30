@@ -19,10 +19,10 @@
     </div>
     <div id="cards" class=" pb-5">
         <div class="container container_cards">
-            <h3 class="text-center py-5 text-light">Nuestros Productos</h3>
+            <h3 class="text-center py-5 text-light">Productos Destacados</h3>
             <!--CARDS de Productos 2-->
             <div class="row">
-                {% for flan in flanes_publicos %}
+                {% for flan in flanes_destacados %}
                 <div class="col-md-6 col-sm-12 col-xl-3 my-2">
                     <div class="card card-postre" style="width: 18rem;">
                         <img src="{{ flan.image_url }}" class="card-img-top img-responsive" alt="...">
@@ -30,10 +30,16 @@
                             <h5 class="card-title">{{ flan.name }}</h5>
                             <hr class="division_nombreflan_descripcion">
                             <p class="card-text">{{ flan.description }}</p>
+                            <a href="{% url 'agregar_al_carrito' flan.id %}" class="btn btn-primary">Agregar al
+                                carrito</a>
                         </div>
                     </div>
                 </div>
                 {% endfor %}
+                <div class="d-grid col-3 mx-auto pt-3">
+                    <a href="/productos" class="btn btn-ligth text-light boton_ver_mas" tabindex="-1" role="button"
+                        aria-disabled="true">Ver todos nuestros productos <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </div>

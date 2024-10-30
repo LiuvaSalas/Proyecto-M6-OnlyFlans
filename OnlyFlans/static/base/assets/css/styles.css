@@ -13,9 +13,14 @@
   width: 300px;
 }
 
+.boton_ver_mas {
+  font-size: large;
+  font-weight: 600;
+}
+
 .card-postre img {
   height: 200px;
-  padding: 20px;
+  padding: 15px;
 }
 
 .container_cards {
@@ -53,6 +58,10 @@
 }
 
 /*NAVBAR*/
+.navbar {
+  font-size: larger;
+}
+
 .division_navbar {
   height: 5px;
   color: #09abe7;
@@ -68,8 +77,44 @@
   background-color: #c3ad85;
 }
 
-/*CONTACTO*/
-#map {
-  height: 400px; /* Altura del mapa */
-  width: 100%; /* Asegura que el mapa ocupe el 100% del ancho del contenedor */
+/*PRODUCTOS*/
+.productos {
+  height: 400px;
+  width: 300px;
+}
+
+.boton_ver_mas {
+  font-size: large;
+  font-weight: 600;
+}
+
+.productos img {
+  height: 200px;
+  padding: 15px;
+}
+
+.container_cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .productos {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row {
+    justify-content: center;
+  }
+}
+
+.division_nombreflan_descripcion {
+  height: 2px;
+  color: #09abe7;
+  background-color: #09abe7;
+}
+
+#cards_productos {
+  background-color: #ffff;
 }

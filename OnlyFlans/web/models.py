@@ -9,6 +9,8 @@ class Flan(models.Model):
     image_url = models.URLField()
     slug = models.SlugField()
     is_private = models.BooleanField()
+    outstanding = models.BooleanField()
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=False)
 
 
 class ContactForm(models.Model):

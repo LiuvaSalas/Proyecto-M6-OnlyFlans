@@ -1,0 +1,54 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--Enlace archivo css en carpeta static-->
+  <link rel="stylesheet" type="text/css" href="{% static 'base/assets/css/styles.css' %}">
+</head>
+
+<body>
+  {% block content %}
+  {%if user.is_authenticated%}
+  <div class="container">
+    <h1>carrito</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Flan</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in carrito.items.all %}
+        <tr>
+          <td>{{ item.flan.name }}</td>
+          <td>{{ item.flan.price }}</td> <!-- Asegúrate de tener el atributo price en el modelo Flan -->
+          <td>{{ item.cantidad }}</td>
+          <td>{{ item.subtotal }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {%else%}
+  <div class="container text-center">
+    <h2>Para poder acceder a la informacion de tu carrito, inicia sesion<h2>
+        <div class="d-grid col-3 mx-auto pt-3">
+          <a href="/login" class="btn btn-dark text-light boton_ver_mas" tabindex="-1" role="button"
+            aria-disabled="true">Iniciar Sesión <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+  </div>
+  {%endif%}
+
+
+  {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--Enlace archivo css en carpeta static-->
+  <link rel="stylesheet" type="text/css" href="{% static 'base/assets/css/styles.css' %}">
+</head>
+
+<body>
+  {% block content %}
+  <div id="cards_productos" class=" pb-5">
+    <div class="container container_cards">
+      <h1 class="text-center py-5 text-dark">Nuestros Productos</h1>
+      <!--CARDS de Productos 2-->
+      <div class="row">
+        {% for flan in flanes_publicos %}
+        <div class="col-md-6 col-sm-12 col-xl-3 my-2">
+          <div class="card productos" style="width: 18rem;">
+            <img src="{{ flan.image_url }}" class="card-img-top img-responsive" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ flan.name }}</h5>
+              <hr class="division_nombreflan_descripcion">
+              <p class="card-text">{{ flan.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}
+</body>
+
+</html>

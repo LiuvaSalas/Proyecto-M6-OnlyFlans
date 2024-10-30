@@ -13,12 +13,20 @@ from django.http import HttpResponse
 
 
 def index(request):
+    flanes_destacados = Flan.objects.filter(outstanding=True)
+
+    contexto = {
+        "flanes_destacados": flanes_destacados,
+    }
+    return render(request, "index.html", contexto)
+
+def productos(request):
     flanes_publicos = Flan.objects.filter(is_private=False)
 
     contexto = {
         "flanes_publicos": flanes_publicos,
     }
-    return render(request, "index.html", contexto)
+    return render(request, "productos.html", contexto)
 
 
 def about(request):

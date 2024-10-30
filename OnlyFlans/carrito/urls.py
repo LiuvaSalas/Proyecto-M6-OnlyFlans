@@ -15,13 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
-from django.urls import path, include
-from web import urls
-from carrito import urls
+from django.urls import path
+from carrito import views
+
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include("web.urls")),
-    path("carrito/", include("carrito.urls")),
+    path("", views.carrito, name="carrito"),
+    path('agregar/<int:flan_id>/', views.agregar_al_carrito, name='agregar_al_carrito'),
 ]
