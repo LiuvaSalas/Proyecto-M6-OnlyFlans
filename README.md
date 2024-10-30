@@ -22,7 +22,7 @@ Items:
 - venv: entorno virtual del proyecto.
 - Landing Page:
 
-![Descripción de la imagen](/Requerimientos/index%20V3.jpg)
+![Descripción de la imagen](/Requerimientos/Landing-PageV3.png)
 
 - Vista: About
 
@@ -30,11 +30,23 @@ Items:
 
 - Vista: Bienvenido
 
-![Descripción de la imagen](/Requerimientos/Bienvenidos%20V3.jpg)
+![Descripción de la imagen](/Requerimientos/BienvenidoV4.png)
 
 - Vista: Contacto
 
-![Descripción de la imagen](/Requerimientos/Contacto%20V1%20-%20Form.jpg)
+![Descripción de la imagen](/Requerimientos/Contacto%20V1%20-%20ModelForm%20-%20Sin%20Datos.jpg)
+
+- Vista: Login
+
+![Descripción de la imagen](/Requerimientos/LogIn-V1.png)
+
+- Vista: Sign Up
+
+![Descripción de la imagen](/Requerimientos/SignUpV1.png)
+
+- Vista: Carrito
+
+![Descripción de la imagen](/Requerimientos/CarritoV1.png)
 
 ## Instalación del Proyecto
 
