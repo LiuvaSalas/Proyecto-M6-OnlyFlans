@@ -36,5 +36,5 @@ def agregar_al_carrito(request, flan_id):
 def eliminar_del_carrito(request, item_id):
     item = get_object_or_404(ItemCarrito, id=item_id)
     if item.carrito.usuario == request.user:
-        item.delete()  # Elimina el ítem del carrito
+        item.delete()  # Elimina el item del carrito
     return redirect("carrito")  # Redirige a la vista del carrito
