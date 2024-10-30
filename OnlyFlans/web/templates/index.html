@@ -30,7 +30,7 @@
                             <h5 class="card-title">{{ flan.name }}</h5>
                             <hr class="division_nombreflan_descripcion">
                             <p class="card-text">{{ flan.description }}</p>
-                            <a href="{% url 'agregar_al_carrito' flan.id %}" class="btn btn-primary">Agregar al
+                            <a href="{% url 'agregar_al_carrito' flan.id %}" class="btn btn-dark">Agregar al
                                 carrito</a>
                         </div>
                     </div>
@@ -43,6 +43,8 @@
             </div>
         </div>
     </div>
+
+
 
 
     {% endblock %}
