@@ -1,4 +1,5 @@
 {% extends 'layout/base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base/assets/css/styles.css' %}" />
 </head>
 
 <body>
     {% block content %}
     <div class="container text-center py-3">
-        <hr>
         <h1>NOSOTROS</h1>
     </div>
     <div class="container contenido_about">
@@ -33,7 +34,7 @@
             postres.</p>
         <br>
         <br>
-        <hr>
+        <hr class="division_nombreflan_descripcion">
 
         <p>Fecha de Creacion: 20 de Octubre del año 2024</p>
         <p>Servicios: Venta online de flanes, opciones de pedidos especiales para eventos y regalos personalizados.</p>

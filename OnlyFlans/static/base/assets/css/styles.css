@@ -4,8 +4,10 @@
   padding: 0;
   border: 0;
 }
+/*x*/
 
 /*CARD DE POSTRES*/
+/*INDEX - BIENVENIDOS*/
 .card-postre {
   height: 400px;
   width: 300px;
@@ -13,6 +15,29 @@
 
 .card-postre img {
   height: 200px;
+  padding: 20px;
+}
+
+.container_cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .card-postre {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row {
+    justify-content: center;
+  }
+}
+
+.division_nombreflan_descripcion {
+  height: 2px;
+  color: #09abe7;
+  background-color: #09abe7;
 }
 
 /*FOOTER*/
@@ -25,4 +50,26 @@
 
 .footer p {
   color: black;
+}
+
+/*NAVBAR*/
+.division_navbar {
+  height: 5px;
+  color: #09abe7;
+  background-color: #09abe7;
+}
+
+/*INDEX*/
+.imagen-landing-page img {
+  width: 100%;
+}
+
+#cards {
+  background-color: #c3ad85;
+}
+
+/*CONTACTO*/
+#map {
+  height: 400px; /* Altura del mapa */
+  width: 100%; /* Asegura que el mapa ocupe el 100% del ancho del contenedor */
 }
