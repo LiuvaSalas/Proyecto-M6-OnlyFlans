@@ -26,7 +26,7 @@ Items:
 
 - Vista: About
 
-![Descripción de la imagen](/Requerimientos/About%20V3.jpg)
+![Descripción de la imagen](/Requerimientos/AboutV4.png)
 
 - Vista: Bienvenido
 
@@ -34,7 +34,7 @@ Items:
 
 - Vista: Contacto
 
-![Descripción de la imagen](/Requerimientos/Contacto%20V1%20-%20ModelForm%20-%20Sin%20Datos.jpg)
+![Descripción de la imagen](/Requerimientos/ContactoV4.png)
 
 - Vista: Login
 
