@@ -11,10 +11,12 @@
 
 <body>
   {%block content%}
-  <form method="POST" action="{% url 'login' %}">
-    {% csrf_token %} {{error}} {{form}}
-    <input type="submit" class="btn btn-primary" value="Login" />
-  </form>
+  <div class="container">
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %} {{error}} {{form}}
+      <input type="submit" class="btn btn-primary" value="Login" />
+    </form>
+  </div>
   {%endblock%}
 </body>
 

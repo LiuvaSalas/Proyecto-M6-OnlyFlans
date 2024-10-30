@@ -16,26 +16,14 @@
   {%if user.is_authenticated%}
   <div class="container">
     <h1>carrito</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Flan</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-          <th>Subtotal</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for item in carrito.items.all %}
-        <tr>
-          <td>{{ item.flan.name }}</td>
-          <td>{{ item.flan.price }}</td> <!-- Asegúrate de tener el atributo price en el modelo Flan -->
-          <td>{{ item.cantidad }}</td>
-          <td>{{ item.subtotal }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+    {% for item in carrito.items.all %}
+    <div class="containter">
+      <h5>{{ item.flan.name }}</h5>
+      <p>Precio: {{ item.flan.price }}</p>
+      <p>Cantidad: {{ item.cantidad }}</p>
+      <a href="{% url 'eliminar_del_carrito' item.id %}" class="btn btn-danger">Eliminar</a>
+    </div>
+    {% endfor %}
   </div>
   {%else%}
   <div class="container text-center">
