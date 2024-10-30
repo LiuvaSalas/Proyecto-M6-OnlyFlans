@@ -14,7 +14,7 @@ class ItemCarrito(models.Model):
     cantidad = models.PositiveIntegerField(default=1)
 
     def subtotal(self):
-        return self.flan.price * self.cantidad  # Debes asegurarte de tener un atributo `price` en `Flan`
+        return self.flan.price * self.cantidad
 
     def __str__(self):
         return f"{self.cantidad} x {self.flan.name}"
